@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
-    "compile:tailwind": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
+    "build:styles": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
     "style:code": "prettier --write '**/*.html' && prettier --write '**/*.css' && prettier --write '**/*.js'"
   },
   "repository": {
