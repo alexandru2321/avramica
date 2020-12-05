@@ -1,0 +1,29 @@
+{
+  "name": "avramica",
+  "version": "1.0.0",
+  "description": "Site livrari!",
+  "main": "index.js",
+  "scripts": {
+    "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "compile:tailwind": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
+    "style:code": "prettier --write '**/*.html' && prettier --write '**/*.css' && prettier --write '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EINazare/avramica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN <https://einazare.github.io/avramica>",
+  "bugs": {
+    "url": "https://github.com/EINazare/avramica/issues"
+  },
+  "homepage": "https://github.com/EINazare/avramica#readme",
+  "devDependencies": {
+    "autoprefixer": "10.0.4",
+    "postcss": "8.1.14",
+    "postcss-nested": "5.0.2",
+    "prettier": "2.2.1",
+    "tailwindcss": "2.0.1"
+  }
+}
