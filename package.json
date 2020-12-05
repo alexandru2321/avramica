@@ -4,9 +4,11 @@
   "description": "Site livrari!",
   "main": "index.js",
   "scripts": {
-    "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install && npm run build:styles",
     "build:styles": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
-    "style:code": "prettier --write './index.html' && prettier --write './assets/css/index.css' && prettier --write './assets/js/index.js'"
+    "style:code": "prettier --write './index.html' && prettier --write './assets/css/index.css' && prettier --write './assets/js/index.js'",
+    "build": "mkdir -p dist && cp -a index.html dist && cp -a assets dist",
+    "deploy": "npm run install:clean && npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,11 @@
   "homepage": "https://github.com/EINazare/avramica#readme",
   "devDependencies": {
     "autoprefixer": "10.0.4",
+    "gh-pages": "3.1.0",
     "postcss": "8.1.14",
     "postcss-nested": "5.0.2",
     "prettier": "2.2.1",
     "tailwindcss": "2.0.1"
-  }
+  },
+  "dependencies": {}
 }
