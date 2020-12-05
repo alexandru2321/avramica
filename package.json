@@ -6,7 +6,7 @@
   "scripts": {
     "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
     "build:styles": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
-    "style:code": "prettier --write '**/*.html' && prettier --write '**/*.css' && prettier --write '**/*.js'"
+    "style:code": "prettier --write './index.html' && prettier --write './assets/css/index.css' && prettier --write './assets/js/index.js'"
   },
   "repository": {
     "type": "git",
