@@ -7,7 +7,7 @@
     "install:clean": "rm -rf node_modules && rm -rf package-lock.json && npm install && npm run build:styles",
     "build:styles": "tailwind build assets/css/index.css -o assets/css/tailwind.css",
     "style:code": "prettier --write './index.html' && prettier --write './assets/css/index.css' && prettier --write './assets/js/index.js'",
-    "build": "mkdir -p dist && cp -a index.html dist && cp -a assets dist",
+    "build": "mkdir -p dist && cp -a index.html dist && cp -a index-blue.html dist && cp -a index-indigo.html dist && cp -a index-pink.html dist && cp -a index-purple.html dist && cp -a assets dist",
     "deploy": "npm run install:clean && npm run build && gh-pages -d dist"
   },
   "repository": {
